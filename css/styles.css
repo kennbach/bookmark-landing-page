@@ -6,37 +6,34 @@
   all: unset;
   display: revert;
 }
-
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-
 ol,
 ul {
   list-style: none;
 }
-
 img {
   max-width: 100%;
 }
-
 table {
   border-collapse: collapse;
 }
-
 textarea {
   white-space: revert;
 }
 /**************** END CSS Reset ****************/
+
+/**************** BEGIN Mobile Styles ****************/
 
 :root {
   /* set font-size to base-10 from base-16 */
   font-size: 62.5%;
 
   /* Variables */
-  --max-width__mobile--content: 375px;
+  --max-width__mobile--content: 315px;
   --max-width__desktop--content: 1440px;
 
   --font-family__body: "Rubik", sans-serif;
@@ -49,12 +46,17 @@ textarea {
   --color__neutral-1: hsl(229, 8%, 60%);
   --color__neutral-2: hsl(229, 31%, 21%);
   --color__background: rgb(255, 255, 255);
+  --color__mobile-nav__background: hsla(229, 31%, 21%, 0.93);
+  --color__mobile-nav__primary: #fff;
 }
 
-/**************** BEGIN Mobile Styles ****************/
-
-.desktop-only {
+.display--none {
   display: none;
+}
+
+a,
+button {
+  cursor: pointer;
 }
 
 body {
@@ -65,30 +67,97 @@ body {
   font-weight: var(--font-weight__regular);
   color: var(--color__neutral-1);
   background-color: var(--color__background);
+  position: relative;
 }
 
-header,
-main,
-footer {
-  margin: 0 auto;
-  max-width: var(--max-width__desktop);
-  min-width: min(var(--max-width__desktop), 100vw);
+header {
+  display: grid;
+  grid-template-columns: 150px auto;
+  max-width: min(100vw, var(--max-width__mobile--content));
+  margin: 35px auto;
 }
 
-a,
-button {
+.header-logo {
+  z-index: 3;
+}
+
+.header-nav__icon {
+  z-index: 3;
+  justify-self: right;
+  align-self: center;
   cursor: pointer;
 }
+
+#header-nav {
+  z-index: 2;
+  position: absolute;
+  top: -35px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-height: 100vh;
+  padding-top: 105px;
+  background-color: var(--color__mobile-nav__background);
+}
+
+.header-nav__website {
+  width: min(315px, 96vw);
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.9rem;
+  font-weight: var(--font-size__body-copy);
+  color: var(--color__mobile-nav__primary);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.3ch;
+}
+
+.header-nav__website li {
+  display: block;
+  min-width: 100%;
+  margin: 0;
+  padding: 1em 0;
+  border-top: 1px solid hsla(0, 0%, 100%, 0.3);
+}
+
+.header-nav__website li:last-of-type a {
+  display: block;
+  min-width: 100%;
+  min-height: 100%;
+  /* margin: 0; */
+  margin-top: 0.5em;
+  padding: 0.5em;
+  border: 2px solid var(--color__mobile-nav__primary);
+  border-radius: 0.25em;
+}
+
+.header-nav__website li:last-of-type a:hover {
+  color: var(--color__mobile-nav__background);
+  background-color: var(--color__mobile-nav__primary);
+  border: 2px solid var(--color__mobile-nav__background);
+  border-radius: 0.25em;
+}
+
+.header-nav__social {
+  /* position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0; */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  /* margin: 3em auto; */
+}
+
+.header-nav__social a svg {
+  margin: 5em 1.1em 2em 1.1em;
+}
+
 /**************** END   Mobile  Styles ****************/
 
 /**************** BEGIN Desktop Styles ****************/
 @media screen and (min-width: 640px) {
-  .desktop-only {
-    display: block;
-  }
-
   header,
-  main,
   footer {
     margin: 0 auto;
     max-width: var(--max-width__desktop--content);
