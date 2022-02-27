@@ -33,8 +33,9 @@ textarea {
   font-size: 62.5%;
 
   /* Variables */
+  --max-width__mobile: 640px;
   --max-width__mobile--content: 315px;
-  --max-width__desktop--content: 1440px;
+  --max-width__desktop--content: 1180px;
 
   --font-family__body: "Rubik", sans-serif;
   --font-weight__regular: 400;
@@ -43,6 +44,8 @@ textarea {
 
   --color__primary-1: hsl(231, 69%, 60%);
   --color__primary-2: hsl(0, 94%, 66%);
+  --color__primary-3: rgb(255, 255, 255);
+
   --color__neutral-1: hsl(229, 8%, 60%);
   --color__neutral-2: hsl(229, 31%, 21%);
   --color__background: rgb(255, 255, 255);
@@ -156,12 +159,78 @@ header {
 /**************** END   Mobile  Styles ****************/
 
 /**************** BEGIN Desktop Styles ****************/
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 1300px) {
   header,
   footer {
-    margin: 0 auto;
     max-width: var(--max-width__desktop--content);
     min-width: min(var(--max-width__desktop--content), 100vw);
+  }
+  #header-nav {
+    margin: 0 70px;
+  }
+}
+@media screen and (min-width: 800px) {
+  header,
+  footer {
+    max-width: min(var(--max-width__desktop--content), 90vw);
+  }
+  header {
+    margin: 45px auto;
+    align-items: center;
+  }
+  .header-logo {
+    margin-left: 1em;
+  }
+  .header-nav__icon {
+    display: none;
+  }
+
+  #header-nav {
+    width: unset;
+    min-width: unset;
+    max-width: unset;
+    display: inline-block;
+    position: unset;
+    min-height: unset;
+    padding-top: unset;
+    background-color: unset;
+  }
+
+  .header-nav__website {
+    width: max-content;
+    margin: 0 0 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, auto) 1fr;
+    align-items: center;
+    font-size: 1.3rem;
+    color: var(--color__neutral-2);
+    letter-spacing: 0.2ch;
+  }
+  .header-nav__website li {
+    margin: 0;
+    padding: 0 1.5em;
+    text-align: left;
+  }
+  .header-nav__website li:last-of-type {
+    margin: 0;
+    padding: 0 0 0 2em;
+  }
+  .header-nav__website li:last-of-type a {
+    margin: 0;
+    padding: 0.8em 2.5em;
+    color: var(--color__primary-3);
+    background-color: var(--color__primary-2);
+    border: none;
+    border-radius: 0.3em;
+  }
+  .header-nav__website li:last-of-type a:hover {
+    color: var(--color__primary-3);
+    background-color: var(--color__primary-1);
+    border: none;
+  }
+
+  .header-nav__social {
+    display: none;
   }
 }
 /**************** END Desktop Styles ****************/
