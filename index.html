@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./css/styles.css" />
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
   <script src="./js/hamburger-nav.js" defer></script>
+  <script src="./js/validate-form.js" defer></script>
   <title>Bookmark Landing Page</title>
 </head>
 
@@ -62,9 +63,14 @@
       <h2>35,000+ already joined</h2>
       <p>Stay up-to-date with what we’re doing</p>
       <form id="subscribe-form" action="#">
-        <input type="text" name="email" placeholder="Enter your email address">
-        <button>Contact Us</button>
+        <div id="email-input__container">
+          <input type="text" name="email" id="email" value="" placeholder="Enter your email address">
+          <em id="error-message__email">Whoops, make sure it's an email</em>
+          <img id="error-icon__email" src="./images/icon-error.svg" alt="" aria-hidden="true">
+        </div>
+        <button type="submit">Contact Us</button>
       </form>
+
     </section>
   </main>
   <footer>
