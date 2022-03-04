@@ -455,7 +455,32 @@ footer {
   .header-nav__social {
     display: none;
   }
+  /* FAQs */
 
+  .faqs-section {
+    margin: 5em auto 8.5em auto;
+    text-align: center;
+    max-width: min(540px, 80vw);
+  }
+
+  .faqs-section__header {
+    font-size: 3.2rem;
+    max-width: 100%;
+  }
+  .faqs-section__details {
+    font-size: 1.8rem;
+  }
+  .faq-question {
+    font-size: 1.8rem;
+  }
+  .faq-answer p {
+    font-size: 1.7rem;
+    line-height: 2.1;
+    color: var(--color__neutral-1);
+    padding: 1.5em 0;
+  }
+
+  /* SUBSCRIBE */
   .subscribe h2 {
     margin-bottom: 3.5em;
   }
