@@ -44,11 +44,14 @@ textarea {
 
   --color__primary-1: hsl(231, 69%, 60%);
   --color__primary-2: hsl(0, 94%, 66%);
-  --color__primary-3: rgb(255, 255, 255);
+  --color__primary-3: hsl(0, 0%, 100%);
 
   --color__neutral-1: hsl(229, 8%, 60%);
   --color__neutral-2: hsl(229, 31%, 21%);
   --color__neutral-3: hsl(229, 8%, 85%);
+  --color__neutral-4: hsl(0, 0%, 96%);
+  --color__neutral-5: hsl(240, 9%, 32%);
+
   --color__background: rgb(255, 255, 255);
   --color__mobile-nav__background: hsla(229, 31%, 21%, 0.93);
   --color__mobile-nav__primary: #fff;
@@ -167,6 +170,76 @@ header {
   margin: 5em 1.1em 2em 1.1em;
 }
 
+/* HEADLINE */
+.headline {
+  width: 100vw;
+}
+.headline-graphic {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+.headline-graphic img {
+  margin-bottom: 1em;
+}
+.headline-graphic::after {
+  display: block;
+  content: "";
+  background-color: var(--color__primary-1);
+  z-index: -1;
+  border-radius: 0 0 0 25vw;
+  width: 80vw;
+  position: absolute;
+  top: 20%;
+  right: 0;
+  bottom: 0;
+}
+
+.headline-content {
+  text-align: center;
+  margin: 0 auto 8em auto;
+}
+.headline-content h1 {
+  font-size: 2.8rem;
+  font-weight: var(--font-weight__medium);
+  color: var(--color__neutral-2);
+  margin: 1.5em 2em 1em 2em;
+}
+.headline-content p {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  margin: 0 3em 2em 3em;
+}
+
+.headline-content__links {
+  width: max-content;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: center;
+  gap: 1em;
+}
+#headline-btn__chrome {
+  padding: 0.8em;
+}
+#headline-btn__chrome:hover {
+  padding: 0.8em;
+  border-color: var(--color__primary-1);
+  color: var(--color__primary-1);
+}
+#headline-btn__firefox {
+  background-color: var(--color__neutral-4);
+  border-color: var(--color__neutral-4);
+  color: var(--color__neutral-5);
+  font-weight: var(--font-weight__medium);
+  padding: 0.8em;
+}
+#headline-btn__firefox:hover {
+  padding: 0.8em;
+  border-color: var(--color__neutral-5);
+}
+
+/* DOWNLOADS */
 .downloads-section {
   max-width: min(var(--max-width__desktop--content), 80vw);
   text-align: center;
@@ -196,7 +269,6 @@ header {
 #download-card__opera {
   grid-area: download-card__opera;
 }
-
 .download-card {
   max-width: min(280px, 90vw);
   margin: 1em auto;
