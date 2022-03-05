@@ -525,8 +525,39 @@ footer {
   .header-nav__social {
     display: none;
   }
-  /* FAQs */
+  /* DOWNLOADS */
+  .downloads-section {
+    display: grid;
+    grid-template-columns: repeat(3, min(auto, max-content));
+    grid-template-areas:
+      "downloads-section__header downloads-section__header downloads-section__header"
+      "downloads-section__details downloads-section__details downloads-section__details"
+      "download-card__chrome download-card__firefox download-card__opera";
+    gap: 1.8em;
+    width: max-content;
+    margin-bottom: 10em;
+  }
+  .downloads-section__header {
+    font-size: 3.2rem;
+    margin: 0 auto;
+  }
+  .downloads-section__details {
+    font-size: 1.8rem;
+    margin: 0 auto;
+  }
+  .download-card {
+    justify-self: center;
+    margin: 0;
+    height: max-content;
+  }
+  #download-card__firefox {
+    margin-top: 2em;
+  }
+  #download-card__opera {
+    margin-top: 4em;
+  }
 
+  /* FAQs */
   .faqs-section {
     margin: 5em auto 8.5em auto;
     text-align: center;
