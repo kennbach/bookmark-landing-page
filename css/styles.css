@@ -167,6 +167,76 @@ header {
   margin: 5em 1.1em 2em 1.1em;
 }
 
+.downloads-section {
+  max-width: min(var(--max-width__desktop--content), 80vw);
+  text-align: center;
+  margin: 0 auto;
+}
+.downloads-section__header {
+  grid-area: downloads-section__header;
+  font-size: 2.4rem;
+  font-weight: var(--font-weight__medium);
+  color: var(--color__neutral-2);
+}
+.downloads-section__details {
+  grid-area: downloads-section__details;
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-regular);
+  line-height: 1.6;
+  margin: 1em auto;
+  padding-bottom: 2em;
+  max-width: 50ch;
+}
+#download-card__chrome {
+  grid-area: download-card__chrome;
+}
+#download-card__firefox {
+  grid-area: download-card__firefox;
+}
+#download-card__opera {
+  grid-area: download-card__opera;
+}
+
+.download-card {
+  max-width: min(280px, 90vw);
+  margin: 1em auto;
+  border-radius: 0.8em;
+  box-shadow: 5px 5px 20px var(--color__box-shadow--primary-1);
+  padding: 1em 0;
+}
+.download-card img {
+  margin: 1em;
+}
+.download-card h3 {
+  font-size: 2rem;
+  font-weight: var(--font-weight__medium);
+  color: var(--color__neutral-2);
+  margin: 0.5em;
+}
+.download-card p {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-regular);
+  color: var(--color__neutral-1);
+}
+.download-card p::after {
+  display: block;
+  width: 100%;
+  height: 30px;
+  content: "";
+  background-image: url(../images/bg-dots.svg);
+  background-repeat: repeat-x;
+  background-position: bottom;
+}
+.download-card a {
+  margin: 2em 2em 0.8em 2em;
+}
+.download-card .btn:hover {
+  color: var(--color__primary-1);
+  background-color: var(--color__primary-3);
+  border: 2px solid var(--color__primary-1);
+  transition: 300ms;
+}
+
 .faqs-section {
   margin: 5em auto 5em auto;
   text-align: center;
