@@ -173,6 +173,7 @@ header {
 /* HEADLINE */
 .headline {
   width: 100vw;
+  margin-top: 4em;
 }
 .headline-graphic {
   position: relative;
@@ -180,7 +181,7 @@ header {
   text-align: center;
 }
 .headline-graphic img {
-  margin-bottom: 1em;
+  width: 95%;
 }
 .headline-graphic::after {
   display: block;
