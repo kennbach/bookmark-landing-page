@@ -21,6 +21,8 @@ openIcon.addEventListener("click", function () {
   // Toggle the header nav icons
   openIcon.classList.toggle("display--none");
   closeIcon.classList.toggle("display--none");
+  // disable body scroll
+  document.body.style.overflow = "hidden";
 });
 
 // Add event listener to closeIcon
@@ -33,4 +35,6 @@ closeIcon.addEventListener("click", function () {
   // Toggle the header nav icons
   openIcon.classList.toggle("display--none");
   closeIcon.classList.toggle("display--none");
+  // enable body scroll
+  document.body.style.overflow = "scroll";
 });
