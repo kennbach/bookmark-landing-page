@@ -702,9 +702,13 @@ footer {
   }
   .headline-graphic {
     grid-area: headline-graphic;
+    text-align: left;
   }
   .headline-graphic::after {
     width: 80%;
+  }
+  .headline-graphic img {
+    width: min(95%, 640px);
   }
   .headline-content {
     grid-area: headline-content;
