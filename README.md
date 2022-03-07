@@ -12,7 +12,6 @@ This is a solution to the [Bookmark landing page challenge on Frontend Mentor](h
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 
 ## Overview
@@ -49,20 +48,16 @@ Desktop
 - CSS Variables
 - CSS Grid
 - Vanilla JavaScript
-- Desktop-First workflow
+- Mobile-First workflow
 - Accessibility Aware
 
 ### What I learned
 
-lorem
+A page this size and complex really stretches the limit of vanilla css files. The size of this css file became unwieldy, making use of something like sass would have made the css much more manageable.
 
 ### Continued development
 
-ipsum
-
-### Useful resources
-
-- [link title](url) - Description
+There was a fair amount of vanilla javascript in this project. I want to continue working with vanilla javascript before jumping to javascript libraries to handle these tasks.
 
 ## Author
 
