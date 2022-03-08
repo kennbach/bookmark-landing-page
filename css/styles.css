@@ -82,7 +82,7 @@ body {
 header {
   display: grid;
   grid-template-columns: 150px auto;
-  max-width: min(100vw, var(--max-width__mobile--content));
+  width: 90vw;
   margin: 35px auto;
 }
 
@@ -107,6 +107,7 @@ header {
 .header-logo {
   z-index: 3;
 }
+
 .header-nav__icon {
   z-index: 3;
   justify-self: right;
@@ -623,15 +624,6 @@ footer {
 /**************** END   Mobile  Styles ****************/
 
 /**************** BEGIN Desktop Styles ****************/
-@media screen and (min-width: 1300px) {
-  header {
-    max-width: var(--max-width__desktop--content);
-    min-width: min(var(--max-width__desktop--content), 100vw);
-  }
-  #header-nav {
-    margin: 0 70px;
-  }
-}
 @media screen and (min-width: 800px) {
   header {
     max-width: min(var(--max-width__desktop--content), 90vw);
@@ -640,6 +632,12 @@ footer {
   }
   .header-logo {
     margin-left: 1em;
+  }
+  #header-logo--white {
+    display: none;
+  }
+  #header-logo--blue {
+    display: block;
   }
   .header-nav__icon {
     display: none;
